@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment</title>
+<!-- This Section for Style -->
+<style type="text/css">
+	.btn {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.success {background-color: #04AA6D;}
+.success:hover {background-color: #46a049;}
+
+.warning {background-color: #ff9800;}
+.warning:hover {background: #e68a00;}
+
+.default {background-color: #e7e7e7; color: black;} 
+.default:hover {background: #ddd;}
+
+.danger {background-color: #f44336;} 
+.danger:hover {background: #da190b;}
+</style>
+
+</head>
+<body>
+	<!-- This section for Validation -->
+	<script type="text/javascript">
+    function Validate() {
+        var s_select = document.getElementById("s_select");
+        if (s_select.value == "") {
+            alert("Please select an option!");
+            return false;
+        }
+        return true;
+    }
+</script>
+<!-- JavaScript section end -->
+<div>
+<center>
+<form action="" method="Post">
+<fieldset>
+<legend><font color="RED"><b>Pay Order details</b></font></legend>
+<center><label style="color:rgb(255, 0, 0);"><h3>PAYMENT PAGE</h3></label></center><br>
+<div>
+	<table>
+		<tr>
+			<td><b>Section</b></td>
+			<td><select id="s_select">
+				<option>select</option>
+				<option>Bill</option>
+				<option>Establishment</option>
+				<option>Administration</option>
+				<option>Town Admin</option>
+				<option>Central Acc</option>
+				<option>Expenditure</option>
+				<option>Taxation</option>
+				<option>Fund</option>
+				<option>Cash</option>
+				<option>ERP</option>
+				<option>Post Retirement</option>
+				<option>CMS</option>
+				<option>Sanctoria Hospital</option>
+			</select></td>
+			<td><b>Payee Type</b></td>
+			<td><select id="s_select">
+				<option>select</option>
+				<option>Vendor</option>
+				<option>Employee</option>
+				<option>Others</option>
+				<option>Customers</option>
+				<option>Bank</option>
+				</select>
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>Pay Order No.</b></td>
+			<td><input type="text" name="pay_order_no" value="" placeholder="Please enter Pay Order No"></td>
+			<td><b>Payment Date</b></td>
+			<td><input type="Date" name="payment_date" value=""></td>
+		</tr>
+		<tr>
+			<td><b>Pay Order Date</b></td>
+			<td><input type="text" name="pay_order_date" value=""></td>
+		</tr>
+		<tr>
+			<td><b>Amount(INR)</b></td>
+			<td><input type="text" name="amount" value=""></td>
+		</tr>
+
+		<tr>
+			<td><b>Amount in Words</b></td>
+			<td><input type="text" name="amount_in_words" value=""></td>
+		</tr>
+		<tr>
+			<td><b>Payee</b></td>
+			<td><input type="text" name="payee" value=""></td>
+		</tr>
+		<tr>
+			<td><b>Narration</b></td>
+			<td><input type="text" name="Narration" value=""></td>
+		</tr>
+	</table>
+</div>
+</fieldset>
+<div>
+	<table>
+		<tr>
+			<td><b>Payment Mode<b></td>
+			<td><input type="text" name="payment_mode" value=""></td>
+			<td><select>
+				<option>CHEQUE</option>
+				<option>CASH</option>
+				<option>DD</option>
+				<option>RTGS</option>
+				<option>NEFT</option>
+				</select>
+			</td>
+		</tr>
+		<tr><td><b>Bank Account No.</b></td>
+			<td><input type="text" name="bank_account_no" value=""></td>
+		</tr>
+		<br>
+		<tr>
+			<td><b>Cheque Date</b></td>
+			<td><input type="Date" name="" value=""></td>
+			<td><b>Bank Charge(INR)</b></td>
+			<td><input type="text" name="bank_charge" value=""></td>
+		</tr>
+	</table>
+</div>&nbsp; 
+<!--Button Group -->
+<input type="submit" value="Validate" onclick="return Validate()" />
+<!-- <div class="btn-group">
+  <button class="btn success" value="Validate" onclick="return Validate()" >ADD</button>&nbsp;&nbsp;  
+  <button disabled="" class="btn default" onclick="return AddValidation()">ADD & PRINT</button>&nbsp;&nbsp;  
+  <button class="btn warning" onclick="return AddValidation()">CLOSE</button>&nbsp;&nbsp; 
+  <button class="btn danger" onclick="return AddValidation()">RESET</button>&nbsp;&nbsp; 
+</div> -->
+
+
+</form>
+</center>
+</div>
+</body>
+</html>
